@@ -2,8 +2,8 @@
 The Low Level RF (LLRF) System is a modular system based on the Red-Pitaya Stemlab 125-14 reconfigurable instrument platform. A modular approach was chosen for design simplicity and future upgrades. Likewise, the Red-Pitaya Stemlab 125-14 was chosen for its ease of use. A block diagram is shown in [Figure 1](#figure-1). The LLRF system comprises of four modules:  
 - [RF Frequency Source](#rf-frequency-source)
 - [Four Quadrant IQ Phase Detector](#four-quadrant-iq-phase-detector)
-- Four channel timing System
-- Monitor System  
+- [Four Channel Timing System](#four-channel-timing-system)
+- [IQ Monitor System](#iq-monitor-system)  
 
 ![llrf block diagam](images/LlrfFPDiagram.png)  
 ##### Figure 1 #####  
@@ -30,7 +30,7 @@ The function of the RF frequency source is to provide pulsed 200 MHz RF with fre
 
 ## Four Quadrant IQ Phase Detector
 [(go to top)](#the-mirrotron-rfq-low-level-rf-system)  
-Stuff to write
+Stuff to write  
 ![phase-detector diagam](images/LLRF-Phase-Detector.png)  
 ##### Figure 6 #####
 *Phase Detector Block Diagram*  
@@ -42,3 +42,18 @@ Stuff to write
 ![phase-detector impl](images/phase-detector.jpg)  
 ##### Figure 8 #####
 *Phase Detector Implementation*  
+
+## Four Channel Timing System
+[(go to top)](#the-mirrotron-rfq-low-level-rf-system)  
+Stuff to write  
+![timing-system dsp](images/mirrotron-timing.png)  
+##### Figure 9 #####
+*Timing System DSP Code*  
+
+![timing-system impl](images/timer.jpg)  
+##### Figure 10 #####
+*Timing System Implementation*  
+
+## IQ Monitor System
+[(go to top)](#the-mirrotron-rfq-low-level-rf-system)  
+Stuff to write  
