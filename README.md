@@ -1,6 +1,6 @@
-# The Mirrotron RFQ Low Level RF System
+# The Mirrotron LLRF Control System
 ## Contents
-* [Overview](#overview)
+* [LLRF Overview](#overview)
     - [Block diagram of LLRF](#figure-1)
     - [LLRF modules Implementation](#figure-2)
 * [RF Frequency Source](#rf-frequency-source)
@@ -16,7 +16,7 @@
     - [Timing System Implementation](#figure-10)  
 * [IQ Monitor System](#iq-monitor-system)
 
-## Overview
+## LLRF Overview
 [(table of contents)](#contents)  
 The Low Level RF (LLRF) System is a modular system based on the Red-Pitaya Stemlab 125-14 reconfigurable instrument platform. A modular approach was chosen for design simplicity and future upgrades. Likewise, the Red-Pitaya Stemlab 125-14 was chosen for its ease of use. A block diagram is shown in [Figure 1](#figure-1). The LLRF system comprises of four modules:  
 - [RF Frequency Source](#rf-frequency-source)
