@@ -1,6 +1,5 @@
-# The Mirrotron LLRF Control System
+# [The Mirrotron RFQ Control System](README.md) #
 ## LLRF Contents
-* [Overview](README.md)
 * [LLRF Overview](#overview)
     - [Block diagram of LLRF](#figure-1)
     - [LLRF modules Implementation](#figure-2)
