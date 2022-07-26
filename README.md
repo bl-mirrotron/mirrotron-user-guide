@@ -15,4 +15,4 @@ The RFQ accelerator system can be divided into 4 major subsystems
 * Vacuum system
 * Cooling system
 
-# [Test](https://bl-mirrotron.github.io/gateGen125-tray/) #
+# [Test](https://bl-mirrotron.github.io/gateGen125-tray/README.md) #
