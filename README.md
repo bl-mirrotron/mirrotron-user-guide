@@ -36,7 +36,7 @@ Upon entry to the application [link](https://www.bl-mirrotron.com/apps), the mai
 
 ### Bridge Control App
 
-Upon startup, the Bridge Control will look as shown in [Figure 2](#figure-2). If the RFQ is off but all water systems and vacuum systems are running, there will be a green permit LED in the status card. All alarm LEDs on the right hand page of the status card should be green. Alarm LEDs have the following color scheme.
+Upon startup, the Bridge Control will look as shown in [Figure 2](#figure-2). If the RFQ is off but all water systems, vacuum systems are running, and power amplifier is running, there will be a green permit LED in the status card. All alarm LEDs on the right hand page of the status card should be green. Alarm LEDs have the following color scheme.
 
 | Alarm Color |Alarm|
 |---|:---:|
@@ -50,7 +50,7 @@ If any alarm is outside the LOLO or HIHI limit, the machine permit will not be e
 
 ##### Figure 1 #####
 *Application Index Page* ([back](#application-index-page))<br>
-![AppIndexPage](doc/AppIndexPage.png)
+<div style="align:center;"><img src="doc/AppIndexPage.png"/></div>
 
 ##### Figure 2 #####
 *Bridge Control Application at startup* ([back](#bridge-control-app))<br>
