@@ -26,4 +26,27 @@ For read only access, the user must have the following roles:
 * coreView
 * writeDatabase
 
-The login JWT has an expiration timer that is set in the user profile by the system administrator. The timer can be extended in the User card found at the bottom of most of the applications. In addition login JWT expires when the user closes the browser session.
+The login JWT has an expiration timer that is set in the user profile by the system administrator. The timer can be extended in the User card found at the bottom of most of the applications as shown in [Figure 1](#figure-1). In addition login JWT expires when the user closes the browser session.
+## Web Applications
+### Application Index Page
+Upon entry to the application [link](https://www.bl-mirrotron.com/apps), the main application index page is displayed as shown in [Figure 1](#figure-1). Most of the applications are for trouble-shooting. The main application for turn-key operations is the Bridge Control app.
+### Bridge Control App
+Upon startup, the Bridge Control will look as shown in Figure 2. If the RFQ is off but all water systems and vacuum systems are running, there will be a green permit LED in the status card. All alarm LEDs on the right hand page of the status card should be green. Alarm LEDs have the following color scheme.
+
+| Alarm Color |Alarm|
+|---|:---:|
+|<span style="color:magenta">Magenta</span>|below the LOLO limit|
+|<span style="color:blue">Blue</span>|below the LOW limit|
+|<span style="color:green">Green</span>|OK|
+|<span style="color:yellow">Yellow</span>|above the HIGH limit|
+|<span style="color:red">Red</span>|above the HIHI limit|
+
+If any alarm is outside the LOLO or HIHI limit, the machine permit will not be enabled. There will be a discussion later on the steps to be followed if there machine permit is off.
+
+##### Figure 1 #####
+*Application Index Page* ([back](*application-index-page))<br>
+![AppIndexPage](doc/AppIndexPage.png)
+
+##### Figure 2 #####
+*Bridge Control Application at startup* ([back](*bridge-control-app))<br>
+![BridgeConStartingl](doc/BridgeConStarting.png)
