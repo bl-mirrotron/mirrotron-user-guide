@@ -54,7 +54,8 @@ If any alarm is outside the LOLO or HIHI limit, the machine permit will not be e
   - The LLRF On/Off is the main activator for the machine protection system. If the machine permit has dropped, the LLRF will turn off and stay turned off until the user turns it back on. The next step is to turn on the LLRF in the Control card as shown in [Figure 3](#figure-3).
 *   **Turn on RF power amplifier**
   - With the LLRF on, the RF power amplifier is ready to be turned on. (In fact the RF power amplifier can be turned on before turning on the LLRF). Turn on the power amp button in the Control card as shown in [Figure 4](#figure-4).
-  -     The amplifier will take some time to turn on (~15secs). While the amplifier is turning on, the Power Amp On LED in the Status card will remain grey until the power amplifier is ready and the Power Amp On LED in the Status card will turn green as shown in [Figure 5](#figure-5).
+  - The amplifier will take some time to turn on (~15secs). While the amplifier is turning on, the Power Amp On LED in the Status card will remain grey until the power amplifier is ready and the Power Amp On LED in the Status card will turn green as shown in [Figure 5](#figure-5).
+
 
 ##### Figure 1 #####
 *Application Index Page* ([back](#application-index-page))
