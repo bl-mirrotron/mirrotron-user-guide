@@ -50,7 +50,7 @@ If any alarm is outside the LOLO or HIHI limit, the machine permit will not be e
 
 ##### Figure 1 #####
 *Application Index Page* ([back](#application-index-page))<br>
-<div style="text-align:center;"><img src="doc/AppIndexPage.png"/></div>
+<div style="width:100%;text-align:center;"><img src="doc/AppIndexPage.png"/></div>
 
 ##### Figure 2 #####
 *Bridge Control Application at startup* ([back](#bridge-control-app))<br>
