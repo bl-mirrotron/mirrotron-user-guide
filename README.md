@@ -48,10 +48,16 @@ Upon startup, the Bridge Control will look as shown in [Figure 2](#figure-2). If
 
 If any alarm is outside the LOLO or HIHI limit, the machine permit will not be enabled. There will be a discussion later on the steps to be followed if there machine permit is off.
 
+The next step is to turn on the LLRF in the Control panel as shown in Figure 3.
+
 ##### Figure 1 #####
 *Application Index Page* ([back](#application-index-page))
 <div style="width:100%;text-align:center;"><img src="doc/AppIndexPage.png"/></div>
 
 ##### Figure 2 #####
-*Bridge Control Application at startup* ([back](#bridge-control-app))
+*Bridge Control App at startup* ([back](#bridge-control-app))
 <div style="width:100%;text-align:center;"><img src="doc/BridgeConStarting.png"/></div>
+
+##### Figure 3 #####
+*Bridge Control App with LLRF on* ([back](#bridge-control-app))
+<div style="width:100%;text-align:center;"><img src="doc/BridgeConDDSOn.png"/></div>
