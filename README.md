@@ -52,7 +52,7 @@ The login JWT has an expiration timer that is set in the user profile by the sys
 ## Web Applications
 ([contents](#table-of-contents))<br>
 
-### Application Index Page
+### <a href="https://www.bl-mirrotron.com/apps" target="_blank">Application Index Page</a>
 ([contents](#table-of-contents))<br>
 Upon entry to the application [link](https://www.bl-mirrotron.com/apps), the main application index page is displayed as shown in [Figure 1](#figure-1). Most of the applications are for trouble-shooting. The main application for turn-key operations is the Bridge Control app.
 
