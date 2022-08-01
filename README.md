@@ -86,47 +86,63 @@ If any alarm is outside the LOLO or HIHI limit, the machine permit will not be e
 
 ### Machine Permit App
 ([contents](#table-of-contents))<br>
-The Bridge Control app gives a quick overview to RFQ operations. However, there are hundreds of parameters in the control system that need to be at the correct value for the RFQ to operate appropriately. If any one of these critical parameters goes outside its LOLO-HIHI alarm range, the permit will drop and the LLRF will be inhibited. For example, [Figure 8](#figure-8) shows a machine permit drop when the pulse repetition rate has been set too low.
+The Bridge Control app gives a quick overview to RFQ operations. However, there are hundreds of parameters in the control system that need to be at the correct value for the RFQ to operate appropriately. If any one of these critical parameters goes outside its LOLO-HIHI alarm range, the permit will drop and the LLRF will be inhibited. For example, [Figure 8](#figure-8) shows a machine permit drop when the pulse repetition rate has been set too low. What system pulled the machine permit can be seen on the Machine Permit app as shown in [Figure 9](#figure-9) in which it is clear that the timing system pulled the permit.
 
+### Alarm Scanner App
+([contents](#table-of-contents))<br>
+The specific parameters that are in alarm and the type of alarm can be detailed in the Alarm Scanner App. The alarms are grouped into *Alarms* which are parameters that are outside the LOLO-HIHI limits and *Warnings* which are parameters outside the LOW-HIGH limits. Alarms will pull the Machine permit, warnings will not. For the example in which the pulse repetition rate has been set too low, a view of the alarms are shown in [Figure 10](#figure-10).
 
+### Post Mortem App
+As discussed in the [Machine Permit app](#machine-permit-app) section When the Machine permit is pulled the LLRF will be inhibited. The LLRF will stay inhibited until it is turned back on again, even if the critical parameter goes back inside its LOLO-HIHI alarm range. This often happens during a vacuum pressure spike. For example, [Figure 11](#figure-11) shows the machine permit being cleared when the pulse repetition rate has been set inside allowed range. The machine permit is clear but the LLRF is still off.
 
-
-
-
-The LLRF will stay inhibited until it is turned back on again, even if the critical parameter goes back inside its LOLO-HIHI alarm range. This often happens during a vacuum pressure spike.
-
-To find out which parameter caused a machine permit drop, the [Blinky-Lite<sup>TM</sup>](https://www.bl-mc.se/) control platform provides a Post-Mortem application.
+To find out which parameter caused a machine permit drop, the [Blinky-Lite<sup>TM</sup>](https://www.bl-mc.se/) control platform provides a Post-Mortem application as shown in [Figure 12](#figure-12).
 
 ## Figures
 ([contents](#table-of-contents))<br>
 ##### Figure 1 #####
-*Application Index Page* ([back](#application-index-page) or [contents](#table-of-contents))
+*Application Index Page* ([Application index page ](#application-index-page) or [contents](#table-of-contents))
 <div style="width:100%;text-align:center;"><img src="doc/AppIndexPage.png"/></div>
 
 ##### Figure 2 #####
-*Bridge Control App at startup* ([back](#bridge-control-app) or [contents](#table-of-contents))
+*Bridge Control App at startup* ([Bridge control app](#bridge-control-app) or [contents](#table-of-contents))
 <div style="width:100%;text-align:center;"><img src="doc/BridgeConStarting.png"/></div>
 
 ##### Figure 3 #####
-*Bridge Control App with LLRF on* ([back](#rfq-startup-steps) or [contents](#table-of-contents))
+*Bridge Control App with LLRF on* ([RFQ startup steps](#rfq-startup-steps) or [contents](#table-of-contents))
 <div style="width:100%;text-align:center;"><img src="doc/BridgeConDDSOn.png"/></div>
 
 ##### Figure 4 #####
-*Bridge Control App with RF power amp startup* ([back](#rfq-startup-steps) or [contents](#table-of-contents))
+*Bridge Control App with RF power amp startup* ([RFQ startup steps](#rfq-startup-steps) or [contents](#table-of-contents))
 <div style="width:100%;text-align:center;"><img src="doc/BridgeConRFAmpStartingUp.png"/></div>
 
 ##### Figure 5 #####
-*Bridge Control App with RF power amp ready* ([back](#rfq-startup-steps) or [contents](#table-of-contents))
+*Bridge Control App with RF power amp ready* ([RFQ startup steps](#rfq-startup-steps) or [contents](#table-of-contents))
 <div style="width:100%;text-align:center;"><img src="doc/BridgeConPAReady.png"/></div>
 
 ##### Figure 6 #####
-*Bridge Control App with RF power on* ([back](#rfq-startup-steps) or [contents](#table-of-contents))
+*Bridge Control App with RF power on* ([RFQ startup steps](#rfq-startup-steps) or [contents](#table-of-contents))
 <div style="width:100%;text-align:center;"><img src="doc/BridgeConRFOn.png"/></div>
 
 ##### Figure 7 #####
-*Repetition Rate Alarm Range* ([back](#rfq-startup-steps) or [contents](#table-of-contents))
+*Repetition Rate Alarm Range* ([RFQ startup steps](#rfq-startup-steps) or [contents](#table-of-contents))
 <div style="width:100%;text-align:center;"><img src="doc/BridgeConRepRateAlarmRange.png"/></div>
 
 ##### Figure 8 #####
-*Machine Permit Drop* ([back](#machine-permit-app) or [contents](#table-of-contents))
+*Machine Permit Drop* ([Machine permit app](#machine-permit-app) or [contents](#table-of-contents))
 <div style="width:100%;text-align:center;"><img src="doc/BridgeConPermitDrop.png"/></div>
+
+##### Figure 9 #####
+*Machine Permit App* ([Machine permit app](#machine-permit-app) or [contents](#table-of-contents))
+<div style="width:100%;text-align:center;"><img src="doc/MachinePermitTimingError.png"/></div>
+
+##### Figure 10 #####
+*Alarm Scanner App* ([Alarm Scanner App](#alarm-scanner-app) or [contents](#table-of-contents))
+<div style="width:100%;text-align:center;"><img src="doc/AlarmScannerRepRatePermit.png"/></div>
+
+##### Figure 11 #####
+*Bridge Control App with the machine permit cleared* ([Post Mortem App](#post-mortem-app) or [contents](#table-of-contents))
+<div style="width:100%;text-align:center;"><img src="doc/BridgeConPermitClearedRFOff.png"/></div>
+
+##### Figure 12 #####
+*Post Mortem app* ([Post Mortem App](#post-mortem-app) or [contents](#table-of-contents))
+<div style="width:100%;text-align:center;"><img src="doc/PostMortemAbortList.png"/></div>
