@@ -63,6 +63,17 @@ If any alarm is outside the LOLO or HIHI limit, the machine permit will not be e
   - The requested power, repetition rate, and pulse length can be adjusted from the Control card. However, there are limits on how much these parameters can be adjusted. The range of these parameters can be seen by clicking the parameter alarm LED on the right hand side of the app. For example, the alarm range of the repetition rate is shown in [Figure 7](#figure-7). If an entry is outside the LOLO-HIHI alarm range , the machine permit will drop.
     - The app will prohibit making setting changes outside the LOLO-HIHI alarm range. However, if the alarm range is changed so that the current setting lies outside the new alarm range, the machine permit will drop.
 
+### Machine Permit App
+The Bridge Control app gives a quick overview to RFQ operations. However, there are hundreds of parameters in the control system that need to be at the correct value for the RFQ to operate appropriately. If any one of these critical parameters goes outside its LOLO-HIHI alarm range, the permit will drop and the LLRF will be inhibited. For example, [Figure 8](#figure-8) shows a machine permit drop when the pulse repetition rate has been set too low.
+
+
+
+
+
+
+The LLRF will stay inhibited until it is turned back on again, even if the critical parameter goes back inside its LOLO-HIHI alarm range. This often happens during a vacuum pressure spike.
+
+To find out which parameter caused a machine permit drop, the [Blinky-Lite<sup>TM</sup>](https://www.bl-mc.se/) control platform provides a Post-Mortem application.
 
 ##### Figure 1 #####
 *Application Index Page* ([back](#application-index-page))
@@ -88,6 +99,10 @@ If any alarm is outside the LOLO or HIHI limit, the machine permit will not be e
 *Bridge Control App with RF power on* ([back](#rfq-startup-steps))
 <div style="width:100%;text-align:center;"><img src="doc/BridgeConRFOn.png"/></div>
 
-##### Figure 6 #####
+##### Figure 7 #####
 *Repetition Rate Alarm Range* ([back](#rfq-startup-steps))
 <div style="width:100%;text-align:center;"><img src="doc/BridgeConRepRateAlarmRange.png"/></div>
+
+##### Figure 8 #####
+*Machine Permit Drop* ([back](#machine-permit-app))
+<div style="width:100%;text-align:center;"><img src="doc/BridgeConPermitDrop.png"/></div>
