@@ -14,13 +14,15 @@
   * [Post Mortem App](#post-mortem-app)
 * [Figures](#figures)
 
+<a href="" target="_blank"></a>
+
 ## Overview
 ([contents](#table-of-contents))<br>
-The [control system for the Mirrotron RFQ](https://www.bl-mirrotron.com/) uses the [Blinky-Lite<sup>TM</sup>](https://www.bl-mc.se/) control platform. This document is an overview of how to use the custom applications for the Mirrotron RFQ. For portability, reliability, and security all Blinky-Lite<sup>TM</sup> user applications are web apps. The Mirrotron RFQ web apps are located at the app [page](https://www.bl-mirrotron.com/apps).
+The <a href="https://www.bl-mirrotron.com/" target="_blank">control system for the Mirrotron RFQ</a> uses the <a href="https://www.bl-mc.se/" target="_blank">Blinky-Lite<sup>TM</sup></a>  control platform. This document is an overview of how to use the custom applications for the Mirrotron RFQ. For portability, reliability, and security all Blinky-Lite<sup>TM</sup> user applications are web apps. The Mirrotron RFQ web apps are located at the app <a href="https://www.bl-mirrotron.com/apps" target="_blank">page</a>.
 
 ## System Login
 ([contents](#table-of-contents))<br>
-For security, Blinky-Lite<sup>TM</sup> requires an [https](https://www.cloudflare.com/learning/ssl/what-is-https/) connection. Any attempt at using an http connection will be redirected to an https connection.
+For security, Blinky-Lite<sup>TM</sup> requires an <a href="https://www.cloudflare.com/learning/ssl/what-is-https/" target="_blank">https</a> connection. Any attempt at using an http connection will be redirected to an https connection.
 
 You must first obtain a login from your system administrator to access the control system. Blinky-Lite<sup>TM</sup> uses role-based access with Jason Web Token(JWT) technology for logging into the system. The user is assigned a role to protect the system from the user making inadvertent settings.
 
@@ -99,7 +101,7 @@ The specific parameters that are in alarm and the type of alarm can be detailed 
 ([contents](#table-of-contents))<br>
 As discussed in the [Machine Permit app](#machine-permit-app) section When the Machine permit is pulled the LLRF will be inhibited. The LLRF will stay inhibited until it is turned back on again, even if the critical parameter goes back inside its LOLO-HIHI alarm range. This often happens during a vacuum pressure spike. For example, [Figure 11](#figure-11) shows the machine permit being cleared when the pulse repetition rate has been set inside allowed range. The machine permit is clear but the LLRF is still off. So now the user does not know why the Machine permit was pulled.
 
-To find out which parameter caused a machine permit drop, the [Blinky-Lite<sup>TM</sup>](https://www.bl-mc.se/) control platform provides a Post-Mortem application as shown in [Figure 12](#figure-12). When the Machine permit transitions from good to bad (an abort), the control system sends out a broadcast to all the sub-systems ([Blinky-Lite<sup>TM</sup>](https://www.bl-mc.se/) trays) to save their current state in timestamped archive database. The Machine Permit app shows a list of all the machine permit aborts. The user can then select one of the Machine permit abort events to see what parameters pulled the Machine permit as shown in [Figure 13](#figure-13) in which the machine permit abort was caused by setting the repetition rate too low.
+To find out which parameter caused a machine permit drop, the Blinky-Lite<sup>TM</sup> control platform provides a Post-Mortem application as shown in [Figure 12](#figure-12). When the Machine permit transitions from good to bad (an abort), the control system sends out a broadcast to all the sub-systems (Blinky-Lite<sup>TM</sup> trays) to save their current state in timestamped archive database. The Machine Permit app shows a list of all the machine permit aborts. The user can then select one of the Machine permit abort events to see what parameters pulled the Machine permit as shown in [Figure 13](#figure-13) in which the machine permit abort was caused by setting the repetition rate too low.
 
 ## Figures
 ([contents](#table-of-contents))<br>
