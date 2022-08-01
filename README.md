@@ -104,21 +104,21 @@ To find out which parameter caused a machine permit drop, the [Blinky-Lite<sup>T
 ## Figures
 ([contents](#table-of-contents))<br>
 ### Figure list
-|Figure|Caption|
+| Figure | Caption |
 |------|-------|
-[Figure 1](#figure-1) | Application Index Page
-[Figure 2](#figure-2) | Bridge Control App at startup
-[Figure 3](#figure-3) | Bridge Control App with LLRF on
-[Figure 4](#figure-4) | Bridge Control App with RF power amp startup
-[Figure 5](#figure-5) | Bridge Control App with RF power amp ready
-[Figure 6](#figure-6) | Bridge Control App with RF power on
-[Figure 7](#figure-7) | Repetition Rate Alarm Range
-[Figure 8](#figure-8) | Machine Permit Abort
-[Figure 9](#figure-9) | Machine Permit App
-[Figure 10](#figure-10) | Alarm Scanner App
-[Figure 11](#figure-11) | Bridge Control App with the machine permit cleared
-[Figure 12](#figure-12) | Post Mortem app
-[Figure 13](#figure-13) | Post Mortem app with alarm list
+| [Figure 1](#figure-1) | Application Index Page|
+| [Figure 2](#figure-2) | Bridge Control App at startup|
+| [Figure 3](#figure-3) | Bridge Control App with LLRF on |
+| [Figure 4](#figure-4) | Bridge Control App with RF power amp startup |
+| [Figure 5](#figure-5) | Bridge Control App with RF power amp ready |
+| [Figure 6](#figure-6) | Bridge Control App with RF power on |
+| [Figure 7](#figure-7) | Repetition Rate Alarm Range |
+| [Figure 8](#figure-8) | Machine Permit Abort |
+| [Figure 9](#figure-9) | Machine Permit App |
+| [Figure 10](#figure-10) | Alarm Scanner App |
+| [Figure 11](#figure-11) | Bridge Control App with the machine permit cleared |
+| [Figure 12](#figure-12) | Post Mortem app |
+| [Figure 13](#figure-13) | Post Mortem app with alarm list |
 
 ##### Figure 1 #####
 *Application Index Page* <br>
