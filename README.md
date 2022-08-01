@@ -66,13 +66,13 @@ If any alarm is outside the LOLO or HIHI limit, the machine permit will not be e
 <div style="width:100%;text-align:center;"><img src="doc/BridgeConStarting.png"/></div>
 
 ##### Figure 3 #####
-*Bridge Control App with LLRF on* ([back](#turn-on-llrf))
+*Bridge Control App with LLRF on* ([back](#rfq-startup-steps))
 <div style="width:100%;text-align:center;"><img src="doc/BridgeConDDSOn.png"/></div>
 
 ##### Figure 4 #####
-*Bridge Control App with RF power amp startup* ([back](#turn-on-rf-power-amplifier))
+*Bridge Control App with RF power amp startup* ([back](#rfq-startup-steps))
 <div style="width:100%;text-align:center;"><img src="doc/BridgeConRFAmpStartingUp.png"/></div>
 
 ##### Figure 5 #####
-*Bridge Control App with RF power amp ready* ([back](#turn-on-rf-power-amplifier))
+*Bridge Control App with RF power amp ready* ([back](#rfq-startup-steps))
 <div style="width:100%;text-align:center;"><img src="doc/BridgeConPAReady.png"/></div>
