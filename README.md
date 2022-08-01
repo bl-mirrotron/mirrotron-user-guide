@@ -104,6 +104,7 @@ To find out which parameter caused a machine permit drop, the [Blinky-Lite<sup>T
 ## Figures
 ([contents](#table-of-contents))<br>
 ### Figure list
+
 | Figure | Caption |
 |------|-------|
 | [Figure 1](#figure-1) | Application Index Page|
