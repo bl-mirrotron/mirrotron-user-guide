@@ -15,6 +15,7 @@
   * [Logbook App](#logbook-app)
 * [Expert Web Applications](#expert-web-applications)
   * [RF Power Amplifier App](#rf-power-amplifier-app)
+  * [RFQ Vacuum App](#rfq-vacuum-app)
 
 ## Overview
 ([contents](#table-of-contents))<br>
@@ -177,9 +178,30 @@ The RFQ accelerator is powered with a 300kW solid state amplifier operating at 2
 
 * <ins>The error and warning code descriptions</ins> can be found in the manufacturer manual.
   - An online version of the codes will be added in the future.
-  - If the amplifier trips due to an error such as reflected power, the amplifier error be reset in the Amplifier Control card. 
+  - If the amplifier trips due to an error such as reflected power, the amplifier error be reset in the Amplifier Control card.
 * <ins>The power-on sequence</ins> should be followed just as outlined in [RFQ Startup Steps](#rfq-startup-steps) described in the [Bridge Control App](#bridge-control-app).
 * <ins>The settings of the headless oscilloscope monitor</ins>, such as the triggering and record length can be adjusted in the RF Power Scope Control card but these settings should be rarely, if ever, adjusted.
 
 <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 18. </span> <span style="font-style: italic;">RF Power Amp app</span></p>
 <div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/PAapp.png"/></div><br>
+
+### <a href="https://www.bl-mirrotron.com/app04?trayNames=01,01,02" target="_blank">RFQ Vacuum App</a>
+([contents](#table-of-contents))<br>
+
+The RFQ vacuum system consists of two turbo pumps mounted directly on the RFQ. The turbo pumps can be isolated from the RFQ via fast gate valves mounted between the turbo pumps and the RFQ body. The exhaust of the turbos is handled by dry scroll backing pumps, one for each turbo pump. The gate valves and the backing pumps can be complete operated remotely via the control system. However, the turbo pumps require manual startup and shutdown as detailed in the <a href="https://www.bl-mirrotron.com/app05?trayNames=none" target="_blank">online-vacuum manuals</a>.
+
+Figure 19 shows the Vacuum status and Control cards for the vacuum system. The vacuum pressure units are in logPa
+* -5 logPa = 1x10<sup>-5</sup> Pa
+* -5 logPa = 1x10<sup>-7</sup> mbar
+* -5 logPa = 7.5x10<sup>-8</sup> Torr
+
+Figure 20 shows the Time Plot and Archive Plot cards for viewing the vacuum pressure evolution and history inside the RFQ (gauges 3 & 4) and in the exhaust lines (gauges 1 & 2). Figure 21 shows the  Backing Pumps control cards and the Turbo Pumps status card.
+
+<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 19. </span> <span style="font-style: italic;">RFQ Vacuum app status and control</span></p>
+<div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/VacApp1.png"/></div><br>
+
+<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 20. </span> <span style="font-style: italic;">RFQ Vacuum pressure time and archive plots</span></p>
+<div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/VacApp2.png"/></div><br>
+
+<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 21. </span> <span style="font-style: italic;">RFQ Vacuum scroll pump control and turbo pump status</span></p>
+<div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/VacApp3.png"/></div><br>
