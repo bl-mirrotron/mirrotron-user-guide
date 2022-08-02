@@ -13,6 +13,8 @@
   * [Alarm Scanner App](#alarm-scanner-app)
   * [Post Mortem App](#post-mortem-app)
   * [Logbook App](#logbook-app)
+* [Expert Web Applications](#expert-web-applications)
+  * [RF Power Amplifier App](#rf-power-amplifier-app)
 
 ## Overview
 ([contents](#table-of-contents))<br>
@@ -145,7 +147,8 @@ LogBookIndex
 
 ### <a href="https://www.bl-mirrotron.com/logbook" target="_blank">Logbook App</a>
 ([contents](#table-of-contents))<br>
-For reliable operations its is very important to keep a logbook of the status of thee control system and accelerator. Instead of a 3rd party add-on, the Blinky-Lite<sup>TM</sup> control platform provides a Logbook application fully integrated into the control system as shown in Figure 14. The Logbook app is text-only on purpose to keep the log entries as clear and concise as possible. The Logbook app is not intended as a notebook. There are a myriad of 3rd party apps that serve this purpose.
+For reliable operations its is very important to keep a logbook of the status of the control system and accelerator. Instead of a 3rd party add-on, the Blinky-Lite<sup>TM</sup> control platform provides a Logbook application fully integrated into the control system as shown in Figure 14. The Logbook app is text-only on purpose to keep the log entries as clear and concise as possible. The Logbook app is not intended as a notebook. There are a myriad of 3rd party apps that serve that purpose.
+
 <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 14. </span> <span style="font-style: italic;">Logbook App</span></p>
 <div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/LogBookIndex.png"/></div><br>
 
@@ -163,3 +166,20 @@ Often, an entry needs corrections so the Logbook has basic editing features whic
 
 <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 17. </span> <span style="font-style: italic;">Logbook App editing an entry</span></p>
 <div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/LogBookEditAttempt.png"/></div><br>
+
+## Expert Web Applications
+([contents](#table-of-contents))<br>
+Almost all operational issues should be handled with the [Bridge Control App](#bridge-control-app). However for optimum performance, the parameters of individual sub-systems (Blinky-Lite<sup>TM</sup> trays) will need to be adjusted or viewed.
+
+### <a href="https://www.bl-mirrotron.com/app09?trayNames=01,01,01" target="_blank">RF Power Amplifier App</a>
+([contents](#table-of-contents))<br>
+The RFQ accelerator is powered with a 300kW solid state amplifier operating at 200 MHz. Basic operation of this amplifier can be done with the [Bridge Control App](#bridge-control-app). However, along with basic operation, the alarm, warning, and watchdog status can be monitored with the RF Power Amp app as shown in Figure 18. The peak RF power sampled at the middle of the pulse is shown in the Status card. This read-back is based on a headless oscilloscope monitor in the diode detected output from the front panel of the the power amplifier which also provides the traces in the Scope Plot card. The RF power is also reported in the Amplifier Status card which is derived from the amplifier manufacturer. Since these are both diode detected devices, there will be some discrepancy in the readings due to calibration.
+
+* <ins>The error and warning code descriptions</ins> can be found in the manufacturer manual.
+  - An online version of the codes will be added in the future.
+  - If the amplifier trips due to an error such as reflected power, the amplifier error be reset in the Amplifier Control card. 
+* <ins>The power-on sequence</ins> should be followed just as outlined in [RFQ Startup Steps](#rfq-startup-steps) described in the [Bridge Control App](#bridge-control-app).
+* <ins>The settings of the headless oscilloscope monitor</ins>, such as the triggering and record length can be adjusted in the RF Power Scope Control card but these settings should be rarely, if ever, adjusted.
+
+<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 18. </span> <span style="font-style: italic;">RF Power Amp app</span></p>
+<div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/PAapp.png"/></div><br>
