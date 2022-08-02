@@ -17,6 +17,7 @@
   * [RF Power Amplifier App](#rf-power-amplifier-app)
   * [RFQ Vacuum App](#rfq-vacuum-app)
   * [RFQ Water Temperature App](#rfq-water-temperature-app)
+  * [RFQ Water Flow App](#rfq-water-flow-app)
 
 ## Overview
 ([contents](#table-of-contents))<br>
@@ -210,10 +211,22 @@ Figure 20 shows the Time Plot and Archive Plot cards for viewing the vacuum pres
 ### <a href="https://www.bl-mirrotron.com/app01?trayNames=inlet,outlet" target="_blank">RFQ Water Temperature App</a>
 ([contents](#table-of-contents))<br>
 
-The RFQ has two water cooling headers, one upstream of proton acceleration (inlet) and one downstream (outlet). The temperature of the water cooling channels is presented in the RFQ Temperature App as shown in Figure 22. As with all Blinky-Lite<sup>TM</sup> applications, the alarm limits can also be edited by clicking on the appropriate alarm LED on the right hand side of the card as shown in Figure 23. As stated earlier, a reading outside the LOLO-HIHI limits will pull the Machine permit.
+The RFQ has two water cooling headers, one upstream of proton acceleration (inlet) and one downstream (outlet). Operation of the Chilling units is detailed in the <a href="https://www.bl-mirrotron.com/app05?trayNames=none" target="_blank">online-vacuum manuals</a>.
+
+The temperature of the water cooling channels is presented in the RFQ Temperature App as shown in Figure 22. As with all Blinky-Lite<sup>TM</sup> applications, the alarm limits can also be edited by clicking on the appropriate alarm LED on the right hand side of the card as shown in Figure 23. As stated earlier, a reading outside the LOLO-HIHI limits will pull the Machine permit.
 
 <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 22. </span> <span style="font-style: italic;">RFQ Temperature App</span></p>
 <div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/TempApp1.png"/></div><br>
 
 <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 23. </span> <span style="font-style: italic;">RFQ Temperature alarm edit</span></p>
 <div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/TempAppAlarmEdit.png"/></div><br>
+
+### <a href="https://www.bl-mirrotron.com/app02?trayNames=inlet,outlet" target="_blank">RFQ Water Flow App</a>
+([contents](#table-of-contents))<br>
+
+As described above, the RFQ has two water cooling headers, one upstream of proton acceleration (inlet) and one downstream (outlet). Operation of the Chilling units is detailed in the <a href="https://www.bl-mirrotron.com/app05?trayNames=none" target="_blank">online-vacuum manuals</a>.
+
+The water flow of the water cooling channels is presented in the RFQ Water Flow App as shown in Figure 24. As stated earlier, a reading outside the LOLO-HIHI limits will pull the Machine permit.
+
+<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 24. </span> <span style="font-style: italic;">RFQ Water Flow app</span></p>
+<div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/WaterFlow.png"/></div><br>
