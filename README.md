@@ -13,8 +13,6 @@
   * [Alarm Scanner App](#alarm-scanner-app)
   * [Post Mortem App](#post-mortem-app)
 
-<a href="" target="_blank"></a>
-
 ## Overview
 ([contents](#table-of-contents))<br>
 The <a href="https://www.bl-mirrotron.com/" target="_blank">control system for the Mirrotron RFQ</a> uses the <a href="https://www.bl-mc.se/" target="_blank">Blinky-Lite<sup>TM</sup></a>  control platform. This document is an overview of how to use the custom applications for the Mirrotron RFQ. For portability, reliability, and security all Blinky-Lite<sup>TM</sup> user applications are web apps. The Mirrotron RFQ web apps are located at the app <a href="https://www.bl-mirrotron.com/apps" target="_blank">page</a>.
@@ -57,7 +55,7 @@ The login JWT has an expiration timer that is set in the user profile by the sys
 ([contents](#table-of-contents))<br>
 Upon entry to the web site, the main application index page is displayed as shown in Figure 1. Most of the applications are for trouble-shooting. The main application for turn-key operations is the Bridge Control app.
 
-<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 1. </span> <span style="font-style: italic;"">Application Index Page</span></p>
+<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 1. </span> <span style="font-style: italic;">Application Index Page</span></p>
 <div style="width:100%;text-align:center;"><img src="doc/AppIndexPage.png"/></div><br>
 
 ### <a href="https://www.bl-mirrotron.com/app08?trayNames=01,01,01,01,01,01,01,01" target="_blank">Bridge Control App</a>
@@ -76,7 +74,7 @@ Upon startup, the Bridge Control will look as shown in Figure 2. If the RFQ is o
 
 If any alarm is outside the LOLO or HIHI limit, the machine permit will not be enabled. There will be a discussion later on the steps to be followed if there machine permit is off.
 
-<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 2. </span> <span style="font-style: italic;"">Bridge Control App at startup</span></p>
+<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 2. </span> <span style="font-style: italic;">Bridge Control App at startup</span></p>
 <div style="width:100%;text-align:center;"><img src="doc/BridgeConStarting.png"/></div><br>
 
 #### RFQ Startup Steps
@@ -84,17 +82,17 @@ If any alarm is outside the LOLO or HIHI limit, the machine permit will not be e
 * **Turn on LLRF**
   - The LLRF On/Off is the main activator for the machine protection system. If the machine permit has dropped, the LLRF will turn off and stay turned off until the user turns it back on. The next step is to turn on the LLRF in the Control card as shown in Figure 3.
 
-  <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 3. </span> <span style="font-style: italic;"">Bridge Control App with LLRF on</span></p>
+  <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 3. </span> <span style="font-style: italic;">Bridge Control App with LLRF on</span></p>
   <div style="width:100%;text-align:center;"><img src="doc/BridgeConDDSOn.png"/></div><br>
 
 * **Turn on RF power amplifier**
   - With the LLRF on, the RF power amplifier is ready to be turned on. (In fact the RF power amplifier can be turned on before turning on the LLRF). Turn on the power amp button in the Control card as shown in Figure 4.
   - The amplifier will take some time to turn on (~15secs). While the amplifier is turning on, the Power Amp On LED in the Status card will remain gray until the power amplifier is ready and the Power Amp On LED in the Status card will turn green as shown in Figure 5.
 
-  <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 4. </span> <span style="font-style: italic;"">Bridge Control App with RF power amp startup</span></p>
+  <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 4. </span> <span style="font-style: italic;">Bridge Control App with RF power amp startup</span></p>
   <div style="width:100%;text-align:center;"><img src="doc/BridgeConRFAmpStartingUp.png"/></div><br>
 
-  <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 5. </span> <span style="font-style: italic;"">Bridge Control App with RF power amp ready</span></p>
+  <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 5. </span> <span style="font-style: italic;">Bridge Control App with RF power amp ready</span></p>
   <div style="width:100%;text-align:center;"><img src="doc/BridgeConPAReady.png"/></div><br>
 
 * **Turn on RF power**
@@ -102,7 +100,7 @@ If any alarm is outside the LOLO or HIHI limit, the machine permit will not be e
   - The forward and reverse power traces are shown in brown and gold. The forward power should be close (but not exactly) to the requested power shown in the Status and Control cards. The forward and reverse power sampled in the middle of the pulse is shown in the Status card. If the reverse power should be less than 10% of the forward power. If there reverse power is large, there could be an issue with the phase lock which will be discussed later.
   - The cavity voltage normalized to the power coupler are the blue traces. These traces are sampled in the middle of the pulse by the LLRF and report a cavity phase. This phase is used for the phase lock system which keeps the cavity in tune.
 
-  <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 6. </span> <span style="font-style: italic;"">Bridge Control App with RF power on</span></p>
+  <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 6. </span> <span style="font-style: italic;">Bridge Control App with RF power on</span></p>
   <div style="width:100%;text-align:center;"><img src="doc/BridgeConRFOn.png"/></div><br>
 
 *  **Adjusting RFQ Parameters**
