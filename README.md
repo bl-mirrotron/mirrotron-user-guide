@@ -12,6 +12,7 @@
   * [Machine Permit App](#machine-permit-app)
   * [Alarm Scanner App](#alarm-scanner-app)
   * [Post Mortem App](#post-mortem-app)
+  * [Logbook App](#logbook-app)
 
 ## Overview
 ([contents](#table-of-contents))<br>
@@ -89,8 +90,8 @@ If any alarm is outside the LOLO or HIHI limit, the machine permit will not be e
   - With the LLRF on, the RF power amplifier is ready to be turned on. (In fact the RF power amplifier can be turned on before turning on the LLRF). Turn on the power amp button in the Control card as shown in Figure 4.
   - The amplifier will take some time to turn on (~15secs). While the amplifier is turning on, the Power Amp On LED in the Status card will remain gray until the power amplifier is ready and the Power Amp On LED in the Status card will turn green as shown in Figure 5.
 
-  <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: #1c6e97;">Figure 4. </span> <span style="font-style: italic;">Bridge Control App with RF power amp startup</span></p>
-  <div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:green;" src="doc/BridgeConRFAmpStartingUp.png"/></div><br>
+  <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 4. </span> <span style="font-style: italic;">Bridge Control App with RF power amp startup</span></p>
+  <div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/BridgeConRFAmpStartingUp.png"/></div><br>
 
   <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 5. </span> <span style="font-style: italic;">Bridge Control App with RF power amp ready</span></p>
   <div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/BridgeConPAReady.png"/></div><br>
@@ -129,10 +130,10 @@ The specific parameters that are in alarm and the type of alarm can be detailed 
 
 ### <a href="https://www.bl-mirrotron.com/postMortem" target="_blank">Post Mortem App</a>
 ([contents](#table-of-contents))<br>
-As discussed in the Machine Permit app [section](#machine-permit-app) When the Machine permit is pulled the LLRF will be inhibited. The LLRF will stay inhibited until it is turned back on again, even if the critical parameter goes back inside its LOLO-HIHI alarm range. This often happens during a vacuum pressure spike. For example, Figure 11 shows the machine permit being cleared when the pulse repetition rate has been set inside allowed range. The machine permit is clear but the LLRF is still off. So now the user does not know why the Machine permit was pulled.
+As discussed in the Machine Permit app [section](#machine-permit-app) When the Machine permit is pulled the LLRF will be inhibited. The LLRF will stay inhibited until it is turned back on again, even if the critical parameter goes back inside its LOLO-HIHI alarm range. This often happens during a vacuum pressure spikeLogBookIndex. For example, Figure 11 shows the machine permit being cleared when the pulse repetition rate has been set inside allowed range. The machine permit is clear but the LLRF is still off. So now the user does not know why the Machine permit was pulled.
 
-To find out which parameter caused a machine permit drop, the Blinky-Lite<sup>TM</sup> control platform provides a Post-Mortem application as shown in Figure 12. When the Machine permit transitions from good to bad (an abort), the control system sends out a broadcast to all the sub-systems (Blinky-Lite<sup>TM</sup> trays) to save their current state in timestamped archive database. The Machine Permit app shows a list of all the machine permit aborts. The user can then select one of the Machine permit abort events to see what parameters pulled the Machine permit as shown in Figure 13 in which the machine permit abort was caused by setting the repetition rate too low.
-
+To find out which parameter caused a machine permit abort, the Blinky-Lite<sup>TM</sup> control platform provides a Post-Mortem application as shown in Figure 12. When the Machine permit transitions from good to bad (an abort), the control system sends out a broadcast to all the sub-systems (Blinky-Lite<sup>TM</sup> trays) to save their current state in timestamped archive database. The Machine Permit app shows a list of all the machine permit aborts. The user can then select one of the Machine permit abort events to see what parameters pulled the Machine permit as shown in Figure 13 in which the machine permit abort was caused by setting the repetition rate too low.
+LogBookIndex
 <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 11. </span> <span style="font-style: italic;">Bridge Control App with the machine permit cleared</span></p>
 <div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/BridgeConPermitClearedRFOff.png"/></div><br>
 
@@ -141,3 +142,24 @@ To find out which parameter caused a machine permit drop, the Blinky-Lite<sup>TM
 
 <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 13. </span> <span style="font-style: italic;">Post Mortem app with alarm list</span></p>
 <div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/PostMortemAlarmList.png"/></div><br>
+
+### <a href="https://www.bl-mirrotron.com/logbook" target="_blank">Logbook App</a>
+([contents](#table-of-contents))<br>
+For reliable operations its is very important to keep a logbook of the status of thee control system and accelerator. Instead of a 3rd party add-on, the Blinky-Lite<sup>TM</sup> control platform provides a Logbook application fully integrated into the control system as shown in Figure 14. The Logbook app is text-only on purpose to keep the log entries as clear and concise as possible. The Logbook app is not intended as a notebook. There are a myriad of 3rd party apps that serve this purpose.
+<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 14. </span> <span style="font-style: italic;">Logbook App</span></p>
+<div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/LogBookIndex.png"/></div><br>
+
+To display an entry select the blue Display button next to the right of the entry of interest. The entry display box appears along with the date, author, and title of the entry as shown in Figure 15. The entry display box can be resized to fit the entry text.
+
+<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 15. </span> <span style="font-style: italic;">Logbook App Entry Display</span></p>
+<div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/LogBookEntryDisplay.png"/></div><br>
+
+To add an entry, you will need to have writeDatabase privileges defined in your [roles](#setting-privilege-roles). Click the dark blue Add button on the upper right hand of the Entries card and a dialog box will appear in which you can add the title and text of the entry as shown in Figure 16. The date and author based on your [system Login](#system-login) will be added automatically.
+
+<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 16. </span> <span style="font-style: italic;">Logbook App adding an entry</span></p>
+<div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/LogBookAddEntry.png"/></div><br>
+
+Often, an entry needs corrections so the Logbook has basic editing features which can be accessed by pressing the yellow button next to the right of the entry of interest as shown in Figure 17. An entry can also be deleted  with the red button next to the yellow edit button. To provide for accountability, only the author of the entry can edit or delete the entry. The right-hand panel of Figure 17 shows that error message will be generated if somebody other than the author tries to edit an entry.
+
+<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 17. </span> <span style="font-style: italic;">Logbook App editing an entry</span></p>
+<div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/LogBookEditAttempt.png"/></div><br>
