@@ -56,7 +56,7 @@ The login JWT has an expiration timer that is set in the user profile by the sys
 Upon entry to the web site, the main application index page is displayed as shown in Figure 1. Most of the applications are for trouble-shooting. The main application for turn-key operations is the Bridge Control app.
 
 <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 1. </span> <span style="font-style: italic;">Application Index Page</span></p>
-<div style="width:100%;text-align:center;"><img src="doc/AppIndexPage.png"/></div><br>
+<div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:green;" src="doc/AppIndexPage.png"/></div><br>
 
 ### <a href="https://www.bl-mirrotron.com/app08?trayNames=01,01,01,01,01,01,01,01" target="_blank">Bridge Control App</a>
 ([contents](#table-of-contents))<br>
@@ -75,7 +75,7 @@ Upon startup, the Bridge Control will look as shown in Figure 2. If the RFQ is o
 If any alarm is outside the LOLO or HIHI limit, the machine permit will not be enabled. There will be a discussion later on the steps to be followed if there machine permit is off.
 
 <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 2. </span> <span style="font-style: italic;">Bridge Control App at startup</span></p>
-<div style="width:100%;text-align:center;"><img src="doc/BridgeConStarting.png"/></div><br>
+<div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:green;" src="doc/BridgeConStarting.png"/></div><br>
 
 #### RFQ Startup Steps
 ([contents](#table-of-contents))<br>
@@ -83,17 +83,17 @@ If any alarm is outside the LOLO or HIHI limit, the machine permit will not be e
   - The LLRF On/Off is the main activator for the machine protection system. If the machine permit has dropped, the LLRF will turn off and stay turned off until the user turns it back on. The next step is to turn on the LLRF in the Control card as shown in Figure 3.
 
   <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 3. </span> <span style="font-style: italic;">Bridge Control App with LLRF on</span></p>
-  <div style="width:100%;text-align:center;"><img src="doc/BridgeConDDSOn.png"/></div><br>
+  <div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:green;" src="doc/BridgeConDDSOn.png"/></div><br>
 
 * **Turn on RF power amplifier**
   - With the LLRF on, the RF power amplifier is ready to be turned on. (In fact the RF power amplifier can be turned on before turning on the LLRF). Turn on the power amp button in the Control card as shown in Figure 4.
   - The amplifier will take some time to turn on (~15secs). While the amplifier is turning on, the Power Amp On LED in the Status card will remain gray until the power amplifier is ready and the Power Amp On LED in the Status card will turn green as shown in Figure 5.
 
   <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 4. </span> <span style="font-style: italic;">Bridge Control App with RF power amp startup</span></p>
-  <div style="width:100%;text-align:center;"><img src="doc/BridgeConRFAmpStartingUp.png"/></div><br>
+  <div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:green;" src="doc/BridgeConRFAmpStartingUp.png"/></div><br>
 
   <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 5. </span> <span style="font-style: italic;">Bridge Control App with RF power amp ready</span></p>
-  <div style="width:100%;text-align:center;"><img src="doc/BridgeConPAReady.png"/></div><br>
+  <div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:green;" src="doc/BridgeConPAReady.png"/></div><br>
 
 * **Turn on RF power**
   - One the Power Amp On LED in the Status card turns green, press on the RF Power On button on the Control card. Once the RF Power On LED on the Status card turns green, you should see traces appear on Scope Plot Card as shown in Figure 6.
@@ -101,31 +101,31 @@ If any alarm is outside the LOLO or HIHI limit, the machine permit will not be e
   - The cavity voltage normalized to the power coupler are the blue traces. These traces are sampled in the middle of the pulse by the LLRF and report a cavity phase. This phase is used for the phase lock system which keeps the cavity in tune.
 
   <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 6. </span> <span style="font-style: italic;">Bridge Control App with RF power on</span></p>
-  <div style="width:100%;text-align:center;"><img src="doc/BridgeConRFOn.png"/></div><br>
+  <div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:green;" src="doc/BridgeConRFOn.png"/></div><br>
 
 *  **Adjusting RFQ Parameters**
   - The requested power, repetition rate, and pulse length can be adjusted from the Control card. However, there are limits on how much these parameters can be adjusted. The range of these parameters can be seen by clicking the parameter alarm LED on the right hand side of the app. For example, the alarm range of the repetition rate is shown in Figure 7. If an entry is outside the LOLO-HIHI alarm range , the machine permit will drop.
     - The app will prohibit making setting changes outside the LOLO-HIHI alarm range. However, if the alarm range is changed so that the current setting lies outside the new alarm range, the machine permit will drop.
 
     <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 7. </span> <span style="font-style: italic;">Repetition Rate Alarm Range</span></p>
-    <div style="width:100%;text-align:center;"><img src="doc/BridgeConRepRateAlarmRange.png"/></div><br>
+    <div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:green;" src="doc/BridgeConRepRateAlarmRange.png"/></div><br>
 
 ### <a href="https://www.bl-mirrotron.com/app07?trayNames=01" target="_blank">Machine Permit App</a>
 ([contents](#table-of-contents))<br>
 The Bridge Control app gives a quick overview to RFQ operations. However, there are hundreds of parameters in the control system that need to be at the correct value for the RFQ to operate appropriately. If any one of these critical parameters goes outside its LOLO-HIHI alarm range, the permit will drop and the LLRF will be inhibited. For example, Figure 8 shows a machine permit drop when the pulse repetition rate has been set too low. What system pulled the machine permit can be seen on the Machine Permit app as shown in Figure 9 in which it is clear that the timing system pulled the permit.
 
 <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 8. </span> <span style="font-style: italic;">Machine Permit Abort</span></p>
-<div style="width:100%;text-align:center;"><img src="doc/BridgeConPermitDrop.png"/></div><br>
+<div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:green;" src="doc/BridgeConPermitDrop.png"/></div><br>
 
 <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 9. </span> <span style="font-style: italic;">Machine Permit App</span></p>
-<div style="width:100%;text-align:center;"><img src="doc/MachinePermitTimingError.png"/></div><br>
+<div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:green;" src="doc/MachinePermitTimingError.png"/></div><br>
 
 ### <a href="https://www.bl-mirrotron.com/alarmScanner" target="_blank">Alarm Scanner App</a>
 ([contents](#table-of-contents))<br>
 The specific parameters that are in alarm and the type of alarm can be detailed in the Alarm Scanner App. The alarms are grouped into *Alarms* which are parameters that are outside the LOLO-HIHI limits and *Warnings* which are parameters outside the LOW-HIGH limits. Alarms will pull the Machine permit, warnings will not. For the example in which the pulse repetition rate has been set too low, a view of the alarms are shown in Figure 10.
 
 <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 10. </span> <span style="font-style: italic;">Alarm Scanner App</span></p>
-<div style="width:100%;text-align:center;"><img src="doc/AlarmScannerRepRatePermit.png"/></div><br>
+<div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:green;" src="doc/AlarmScannerRepRatePermit.png"/></div><br>
 
 ### <a href="https://www.bl-mirrotron.com/postMortem" target="_blank">Post Mortem App</a>
 ([contents](#table-of-contents))<br>
@@ -134,10 +134,10 @@ As discussed in the Machine Permit app [section](#machine-permit-app) When the M
 To find out which parameter caused a machine permit drop, the Blinky-Lite<sup>TM</sup> control platform provides a Post-Mortem application as shown in Figure 12. When the Machine permit transitions from good to bad (an abort), the control system sends out a broadcast to all the sub-systems (Blinky-Lite<sup>TM</sup> trays) to save their current state in timestamped archive database. The Machine Permit app shows a list of all the machine permit aborts. The user can then select one of the Machine permit abort events to see what parameters pulled the Machine permit as shown in Figure 13 in which the machine permit abort was caused by setting the repetition rate too low.
 
 <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 11. </span> <span style="font-style: italic;">Bridge Control App with the machine permit cleared</span></p>
-<div style="width:100%;text-align:center;"><img src="doc/BridgeConPermitClearedRFOff.png"/></div><br>
+<div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:green;" src="doc/BridgeConPermitClearedRFOff.png"/></div><br>
 
 <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 12. </span> <span style="font-style: italic;">Post Mortem app</span></p>
-<div style="width:100%;text-align:center;"><img src="doc/PostMortemAbortList.png"/></div><br>
+<div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:green;" src="doc/PostMortemAbortList.png"/></div><br>
 
 <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 13. </span> <span style="font-style: italic;">ost Mortem app with alarm list</span></p>
-<div style="width:100%;text-align:center;"><img src="doc/PostMortemAlarmList.png"/></div><br>
+<div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:green;" src="doc/PostMortemAlarmList.png"/></div><br>
