@@ -364,14 +364,45 @@ In addition to the control system, there are a number of auxiliary systems such 
 ## <a href="https://www.bl-mirrotron.com/core" target="_blank">Core Applications</a>
 ([contents](#table-of-contents))<br>
 
+In addition to the custom applications for the Mirrotron RFQ, the Blinky-Lite<sup>TM</sup> control system platform supplies 8 general purpose applications as shown in Figure 32. The most commonly used core applications are:
+* [Access Log](#access-log)
+* [Settings Log](#settings-log)
+* [Scalar Archive Plotter](#scalar-archive-plotter)
+
+The functions of the other applications are:
+* <ins>Scalar Viewer </ins> View and set any scalar parameter value and alarm range
+* <ins>Scalar Plotter</ins> Plots any scalar control system parameter as a function of time
+* <ins>Vector Plotter</ins> Plots any vector control system parameter as a function of time
+* <ins>Vector Archive Plotter</ins> Plots the history of any vector control system parameter
+* <ins>Alarm Scanner</ins> Lists all parameters alarms and warnings
+
 <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 32. </span> <span style="font-style: italic;">Core Applications</span></p>
 <div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/CoreApps.png"/></div><br>
 
 ### <a href="https://www.bl-mirrotron.com/access-log" target="_blank">Access Log</a>
 ([contents](#table-of-contents))<br>
+The Access Log App is used for determining who, when, where and what control system application has been accessed as shown in Figure 33. The default search parameters are for the past day but much longer searches are possible.
 
-<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 33. </span> <span style="font-style: italic;">Access Log</span></p>
+<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 33. </span> <span style="font-style: italic;">Access Log App</span></p>
 <div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/AccessLogApp.png"/></div><br>
 
 ### <a href="https://www.bl-mirrotron.com/settings-log" target="_blank">Settings Log</a>
 ([contents](#table-of-contents))<br>
+
+The Settings Log App is used for determining who, when, where and what control system parameter has been changed as shown in Figure 34. The default search parameters are for the past day but much longer searches are possible.
+
+<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 34. </span> <span style="font-style: italic;">Settings Log App</span></p>
+<div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/SettingsLogApp.png"/></div><br>
+
+### <a href="https://www.bl-mirrotron.com/scalarArchivePlotter" target="_blank">Scalar Archive Plotter</a>
+([contents](#table-of-contents))<br>
+
+The Scalar Archive Plotter application is used to view the history of any parameter in the control system. The tray type is first selected, followed by the tray name, followed by the scalar property (reading or setting) and finally the parameter name. The user can choose points or lines and which axis to plot as shown in Figure 35. The user defines the search range was well.
+
+In addition, a comma separated table can be exported to a spreadsheet program such as Excel after the trace has been plotted. The export can be obtained by clicking the  trace (Tr) number on the right hand side of the app as shown in Figure 36.
+
+<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 35. </span> <span style="font-style: italic;">Scalar Archive Plotter App</span></p>
+<div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/ScalarArchivePlotter.png"/></div><br>
+
+<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 36. </span> <span style="font-style: italic;">Scalar Archive Plotter CSV Export</span></p>
+<div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/ScalarArchiveCSVExport.png"/></div><br>
