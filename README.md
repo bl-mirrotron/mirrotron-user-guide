@@ -25,6 +25,11 @@
   * [Timing App](#timing-app)
     - [Channel allocation](#channel-allocation)
     - [Easy Setup Timer](#easy-setup-timer)
+  * [Manuals App](#manuals-app)
+* [Core Applications](#core-applications)
+  * [Access Log](#access-log)
+  * [Settings Log](#settings-log)
+  * [Scalar Archive Plotter](#scalar-archive-plotter)
 
 ## Overview
 ([contents](#table-of-contents))<br>
@@ -323,6 +328,7 @@ To set the correct phase target for the PLL:
 The Mirrotron RFQ is a pulsed system so a timing system is required. The Mirrotron Timing system is an 8 channel system based on a 32 bit counter clocked at 125 MHz. The resolution of the timing system is 8nS and can have intervals as long as 17 seconds.
 
 #### Channel allocation
+([contents](#table-of-contents))<br>
 The Mirrotron RFQ uses five of the eight channels:
 * <ins>Channel 0</ins>  for the RF source and phase Detector
 * <ins>Channel 1</ins>  for LLRF scope
@@ -331,7 +337,7 @@ The Mirrotron RFQ uses five of the eight channels:
 * <ins>Channel 4</ins>  for the RF Power Amp Scope
 
 #### Easy Setup Timer
-
+([contents](#table-of-contents))<br>
 These channels can be configured with the Timing App as shown in Figure 30. To change the pulse length of the RFQ, all five channels would need to be adjusted which would be time consuming and error prone. To make it easier to change the pulse length a virtual tray called the Easy Setup Timer was created. This virtual tray will adjust all five channels synchronously.
 
 All the user needs to adjust is:
@@ -346,3 +352,14 @@ The other Easy Setup Timer parameters are:
 
 <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 30. </span> <span style="font-style: italic;">Timing App</span></p>
 <div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/TimingApp.png"/></div><br>
+
+### <a href="https://www.bl-mirrotron.com/app05?trayNames=none" target="_blank">Manuals App</a>
+([contents](#table-of-contents))<br>
+
+In addition to the control system, there are a number of auxiliary systems such as the cooling skids and the turbo pumps that are manually controlled. The Blinky-Lite<sup>TM</sup> control platform provides a Manuals App where these manuals are readily accessible as shown in Figure 31. These manuals are pointers to other web pages which can be easily edited with other web editors such as Google Docs or Github Markdown.
+
+<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 31. </span> <span style="font-style: italic;">Manuals App</span></p>
+<div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/ManualsApp.png"/></div><br>
+
+### <a href="https://www.bl-mirrotron.com/core" target="_blank">Core Applications</a>
+([contents](#table-of-contents))<br>
