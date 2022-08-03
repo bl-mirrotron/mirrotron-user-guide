@@ -21,6 +21,7 @@
   * [Low Level RF App](#low-level-rf-app)
     - [RF Frequency Control](#rf-frequency-control)
     - [Phase Lock Control](#phase-lock-control)
+    - [Tuning the Phase Lock loop](#tuning-the-phase-lock-loop)
 
 
 ## Overview
@@ -243,7 +244,7 @@ The Low Level RF (LLRF) controls the amplitude and frequency of the RF signal th
 * Phase Detector
 * LLRF Scope
 
-Each of these trays has quite a few parameters that are <a href="https://bl-mirrotron.github.io/#rf-source" target="_blank">described</a> in the system architecture. The LLRF app is shown in Figure 25. The Status card displays the cavity voltage detected by the cavity pickup and normalized to the coupler voltage measured at the center of the RF pulse. The phase signal is the comparison between the RF wave sent to the Power amplifier to the RF wave detected at the cavity pickup. The absolute value of the phase signal is arbitrary and is affected by cable lengths in the system in addition to the cavity transfer function. Relative changes of the phase can be used to determine if the cavity resonant frequency is drifting.
+Each of these trays has quite a few parameters that are <a href="https://bl-mirrotron.github.io/#rf-source" target="_blank">described</a> in the system architecture. The LLRF app is shown in Figure 25. The Status card displays the cavity voltage detected by the cavity pickup and normalized to the coupler voltage measured at the center of the RF pulse. The phase signal is the comparison between the RF wave sent to the Power amplifier to the RF wave detected at the cavity pickup. The absolute value of the phase signal is arbitrary and is affected by cable lengths in the system in addition to the location of the cavity resonant frequency. Relative changes of the phase can be used to determine if the cavity resonant frequency is drifting.
 
 Below the status card is the LLRF scope plot which shows the magnitude, in-phase and out-of-phase components of the cavity voltage. The LLRF scope plot can be adjusted in the LLRF Scope Control Card shown in Figure 26 but most of these parameters should be rarely adjusted.
 
@@ -252,43 +253,61 @@ Below the status card is the LLRF scope plot which shows the magnitude, in-phase
 
 #### RF Frequency Control
 The RF frequency and amplitude is set by the parameters in the RF Source Control card as shown in Figure 26.
-* <ins>rf-src-01.phaseInc</ins> sets the RF frequency without phase feedback.
-* <ins>rf-src-01.rfAmpHi</ins> sets the amplitude of the RF pulse in units of kW.
+* <ins>rf-src.01.phaseInc</ins> sets the RF frequency without phase feedback.
+* <ins>rf-src.01.rfAmpHi</ins> sets the amplitude of the RF pulse in units of kW.
   - It is the same parameter as the Requested Power parameter displayed in Control card of the [Bridge Control app](#bridge-control-app).
-* <ins>rf-src-01.rfAmpLowi</ins> sets offset value in the RF Gate
+* <ins>rf-src.01.rfAmpLowi</ins> sets offset value in the RF Gate
   - add is used to minimize leakage voltage in the RF gate.
-* <ins>rf-src-01.clr</ins> turns off all components of the RF frequency source FPGA
-* <ins>rf-src-01.resetDDS</ins> turns off Direct Digital Synthesizer of the RF frequency source FPGA
+* <ins>rf-src.01.clr</ins> turns off all components of the RF frequency source FPGA
+* <ins>rf-src.01.resetDDS</ins> turns off Direct Digital Synthesizer of the RF frequency source FPGA
   - it is the parameter used by the Machine Permit system to stop RF power supplied to the RFQ.
   - it is also the logical inverse of <ins>LLRF On</ins> shown in the Control card of the [Bridge Control app](#bridge-control-app)
-* <ins>rf-src-01.fbFiltShift</ins> controls low pass filter that filters noise coming from the Phase Detector error signal that is used to correct the RF frequency when the system is in phase lock mode.
+* <ins>rf-src.01.fbFiltShift</ins> controls low pass filter that filters noise coming from the Phase Detector error signal that is used to correct the RF frequency when the system is in phase lock mode.
   - A value of 1 is a filter with a corner at 62.5 MHz.
   - A value of 2 is a filter with a corner at 31.2 MHz
   - A value of 18 is a filter with a corner at 477 Hz
-* <ins>rf-src-01.fbGainShift</ins> reduces the Phase Detector error signal that is used to correct the RF frequency when the system is in phase lock mode.
+* <ins>rf-src.01.fbGainShift</ins> reduces the Phase Detector error signal that is used to correct the RF frequency when the system is in phase lock mode.
   - A value of 1 reduces the signal by 2
   - A value of 2 reduces the signal by 4
   - A value of 12 reduces the signal by 4096
 
 #### Phase Lock Control
 The cavity resonant frequency will change by several cavity bandwidths (cavity bandwidth ~ 20kHz) as the cavity heats while running at high duty factors. The phase detector measures phase between the between the RF wave sent to the Power amplifier to the RF wave detected at the cavity pickup. As the cavity heats up, this phase will change as the cavity resonant frequency drifts. This change phase shift can be used to shift the frequency of the RF source to track the cavity resonant frequency in a phase-lock feedback loop (PLL). The parameters the Phase Detector Control card shown in Figure 26 are used to tune the PLL.
-* <ins>phase-detector-01.phaseTarget</ins> is the phase in which the PLL will lock to.
-* <ins>phase-detector-01.sampleTime</ins> is the time from the start of the RF pulse in which the phase for the PLL is measured.
+* <ins>phase-detector.01.phaseTarget</ins> is the phase in which the PLL will lock to.
+* <ins>phase-detector.01.sampleTime</ins> is the time from the start of the RF pulse in which the phase for the PLL is measured.
   - This parameter will be controlled by the EasySetupTimer.
-* <ins>phase-detector-01.fbMult</ins> is the fine gain control of the PLL.
-* <ins>phase-detector-01-01.clr</ins> turns off all components of the Phase Detector FPGA
-* <ins>phase-detector-01-01.clrFB</ins> turns off the PLL.
+* <ins>phase-detector.01.fbMult</ins> is the fine gain control of the PLL.
+* <ins>phase-detector.01-01.clr</ins> turns off all components of the Phase Detector FPGA
+* <ins>phase-detector.01.clrFB</ins> turns off the PLL.
   - It is the same parameter as the Phase Lock On parameter displayed in Control card of the [Bridge Control app](#bridge-control-app).
-*  <ins>phase-detector-01-01.phaseLPFShift</ins> controls low pass filters on the input I-Q signals from the phase detector analog electronics.
+*  <ins>phase-detector.01.phaseLPFShift</ins> controls low pass filters on the input I-Q signals from the phase detector analog electronics.
   - A value of 1 is a filter with a corner at 62.5 MHz.
   - A value of 2 is a filter with a corner at 31.2 MHz
   - A value of 10 is a filter with a corner at 122 kHz
-* <ins>phase-detector-01-01.loadClkDelay</ins> is the length in 8nS intervals of the sample in the sample and hold of the PLL
-* <ins>phase-detector-01-01.fbShiftL</ins> increases the gain of the phase error signal.
+* <ins>phase-detector.01.loadClkDelay</ins> is the length in 8nS intervals of the sample in the sample and hold of the PLL
+* <ins>phase-detector.01.fbShiftL</ins> increases the gain of the phase error signal.
   - A value of 0 has no effect
   - A value of 1 increases the signal by 2
   - A value of 2 increases the signal by 4
-* <ins>phase-detector-01-01.dacOffset</ins> is used to null the signal supplied to the frequency error input of the RF source.
+* <ins>phase-detector.01.dacOffset</ins> is used to null the signal supplied to the frequency error input of the RF source.
 
 <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 26. </span> <span style="font-style: italic;">LLRF Control cards</span></p>
 <div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/LLRFApp2.png"/></div><br>
+
+#### Tuning the Phase Lock loop
+To set the correct phase target for the PLL:
+* It is recommended to due a frequency scan of the RFQ at low power.
+* To do a frequency scan, the PLL should be disabled as shown in Figure 27.
+  - If the RF frequency is not at the cavity resonance, the reflected power from the RFQ will be large as shown in Figure 27.
+* Now, the <ins>rf-src.01.phaseInc</ins> is adjusted until the reverse power is minimized as shown in Figure 28.
+* At this point, set the  <ins>phase-detector.01.phaseTarget</ins> equal to the measured cavity phase at resonance <ins>llrf-scope.01.phase</ins>
+* and then turn on the PLL as shown in Figure 29.
+
+<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 27. </span> <span style="font-style: italic;">RF frequency off resonance</span></p>
+<div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/BridgeConPhaseLockOffFreq325.png"/></div><br>
+
+<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 28. </span> <span style="font-style: italic;">RF frequency on resonance</span></p>
+<div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/BridgeConPhaseLockOffFreq342.png"/></div><br>
+
+<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 29. </span> <span style="font-style: italic;">RF frequency off-resonance but PLL on</span></p>
+<div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/BridgeConPhaseLockOnFreq325.png"/></div><br>
