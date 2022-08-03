@@ -234,3 +234,34 @@ The water flow of the water cooling channels is presented in the RFQ Water Flow 
 
 ### <a href="https://www.bl-mirrotron.com/app03?trayNames=01,01,01,01" target="_blank">Low Level RF App</a>
 ([contents](#table-of-contents))<br>
+
+The Low Level RF (LLRF) controls the amplitude and frequency of the RF signal that is fed into the RF power amplifier. The system consists of three Blinky-Lite<sup>TM</sup> trays.
+* RF Source
+* Phase Detector
+* LLRF Scope
+
+Each of these trays has quite a few parameters that are <a href="https://bl-mirrotron.github.io/#rf-source" target="_blank">described</a> in the system architecture. The LLRF app is shown in Figure 25. The Status card displays the cavity voltage detected by the cavity pickup and normalized to the coupler voltage measured at the center of the RF pulse. The phase signal is the comparison between the RF wave sent to the Power amplifier to the RF wave detected at the cavity pickup. The absolute value of the phase signal is arbitrary and is affected by cable lengths in the system in addition to the cavity transfer function. Relative changes of the phase can be used to determine if the cavity resonant frequency is drifting.
+
+Below the status card is the LLRF scope plot which shows the magnitude, in-phase and out-of-phase components of the cavity voltage. The LLRF scope plot can be adjusted in the LLRF Scope Control Card shown in Figure 26 but most of these parameters should be rarely adjusted.
+
+The RF frequency and amplitude is set by the parameters in the RF Source Control card.
+* <ins>rf-src-01.phaseInc</ins> sets the RF frequency without phase feedback.
+* <ins>rf-src-01.rfAmpHi</ins> sets the amplitude of the RF pulse in units of kW.
+  - It is the same value as the Requested Power displayed in Control card of the [Bridge Control app](#bridge-control-app).
+* <ins>rf-src-01.rfAmpLowi</ins> sets offset value in the RF Gate
+  - add is used to minimize leakage voltage in the RF gate.
+* <ins>rf-src-01.clr</ins> turns off all components of the RF frequency source FPGA
+* <ins>rf-src-01.resetDDS</ins> turns off Direct Digital Synthesizer of the RF frequency source FPGA
+  - it is the parameter used by the Machine Permit system to stop RF power supplied to the RFQ.
+  - it is also the logical inverse of <ins>LLRF On</ins> shown in the Control card of the [Bridge Control app](#bridge-control-app)
+* <ins>rf-src-01.fbFiltShift</ins> controls low past filter that filters noise coming from the Phase Detector error signal that is used to correct the RF frequency when the system is in phase lock mode. 
+  - A value of 1 is a filter with a corner at 62.5 MHz.
+  - A value of 2 is a filter with a corner at 31.2 MHz
+  - A value of 18 is a filter with a corner at 477 Hz
+
+
+<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 25. </span> <span style="font-style: italic;">LLRF app</span></p>
+<div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/LLRFApp1.png"/></div><br>
+
+<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 26. </span> <span style="font-style: italic;">LLRF Control cards</span></p>
+<div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/LLRFApp2.png"/></div><br>
