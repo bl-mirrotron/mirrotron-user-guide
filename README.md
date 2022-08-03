@@ -19,6 +19,9 @@
   * [RFQ Water Temperature App](#rfq-water-temperature-app)
   * [RFQ Water Flow App](#rfq-water-flow-app)
   * [Low Level RF App](#low-level-rf-app)
+    - [RF Frequency Control](#rf-frequency-control)
+    - [Phase Lock Control](#phase-lock-control)
+    
 
 ## Overview
 ([contents](#table-of-contents))<br>
@@ -244,6 +247,7 @@ Each of these trays has quite a few parameters that are <a href="https://bl-mirr
 
 Below the status card is the LLRF scope plot which shows the magnitude, in-phase and out-of-phase components of the cavity voltage. The LLRF scope plot can be adjusted in the LLRF Scope Control Card shown in Figure 26 but most of these parameters should be rarely adjusted.
 
+#### RF Frequency Control
 The RF frequency and amplitude is set by the parameters in the RF Source Control card.
 * <ins>rf-src-01.phaseInc</ins> sets the RF frequency without phase feedback.
 * <ins>rf-src-01.rfAmpHi</ins> sets the amplitude of the RF pulse in units of kW.
@@ -254,10 +258,18 @@ The RF frequency and amplitude is set by the parameters in the RF Source Control
 * <ins>rf-src-01.resetDDS</ins> turns off Direct Digital Synthesizer of the RF frequency source FPGA
   - it is the parameter used by the Machine Permit system to stop RF power supplied to the RFQ.
   - it is also the logical inverse of <ins>LLRF On</ins> shown in the Control card of the [Bridge Control app](#bridge-control-app)
-* <ins>rf-src-01.fbFiltShift</ins> controls low past filter that filters noise coming from the Phase Detector error signal that is used to correct the RF frequency when the system is in phase lock mode. 
+* <ins>rf-src-01.fbFiltShift</ins> controls low past filter that filters noise coming from the Phase Detector error signal that is used to correct the RF frequency when the system is in phase lock mode.
   - A value of 1 is a filter with a corner at 62.5 MHz.
   - A value of 2 is a filter with a corner at 31.2 MHz
   - A value of 18 is a filter with a corner at 477 Hz
+* <ins>rf-src-01.fbGainShift</ins> reduces the Phase Detector error signal that is used to correct the RF frequency when the system is in phase lock mode.
+  - A value of 1 reduces the signal by 2
+  - A value of 2 reduces the signal by 4
+  - A value of 12 reduces the signal by 4096
+
+#### Phase Lock Control
+
+
 
 
 <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 25. </span> <span style="font-style: italic;">LLRF app</span></p>
