@@ -361,5 +361,17 @@ In addition to the control system, there are a number of auxiliary systems such 
 <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 31. </span> <span style="font-style: italic;">Manuals App</span></p>
 <div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/ManualsApp.png"/></div><br>
 
-### <a href="https://www.bl-mirrotron.com/core" target="_blank">Core Applications</a>
+## <a href="https://www.bl-mirrotron.com/core" target="_blank">Core Applications</a>
+([contents](#table-of-contents))<br>
+
+<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 32. </span> <span style="font-style: italic;">Core Applications</span></p>
+<div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/CoreApps.png"/></div><br>
+
+### <a href="https://www.bl-mirrotron.com/access-log" target="_blank">Access Log</a>
+([contents](#table-of-contents))<br>
+
+<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 33. </span> <span style="font-style: italic;">Access Log</span></p>
+<div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/AccessLogApp.png"/></div><br>
+
+### <a href="https://www.bl-mirrotron.com/settings-log" target="_blank">Settings Log</a>
 ([contents](#table-of-contents))<br>
