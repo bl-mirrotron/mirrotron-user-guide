@@ -22,7 +22,9 @@
     - [RF Frequency Control](#rf-frequency-control)
     - [Phase Lock Control](#phase-lock-control)
     - [Tuning the Phase Lock loop](#tuning-the-phase-lock-loop)
-
+  * [Timing App](#timing-app)
+    - [Channel allocation](#channel-allocation)
+    - [Easy Setup Timer](#easy-setup-timer)
 
 ## Overview
 ([contents](#table-of-contents))<br>
@@ -277,7 +279,7 @@ The RF frequency and amplitude is set by the parameters in the RF Source Control
 The cavity resonant frequency will change by several cavity bandwidths (cavity bandwidth ~ 20kHz) as the cavity heats while running at high duty factors. The phase detector measures phase between the between the RF wave sent to the Power amplifier to the RF wave detected at the cavity pickup. As the cavity heats up, this phase will change as the cavity resonant frequency drifts. This change phase shift can be used to shift the frequency of the RF source to track the cavity resonant frequency in a phase-lock feedback loop (PLL). The parameters the Phase Detector Control card shown in Figure 26 are used to tune the PLL.
 * <ins>phase-detector.01.phaseTarget</ins> is the phase in which the PLL will lock to.
 * <ins>phase-detector.01.sampleTime</ins> is the time from the start of the RF pulse in which the phase for the PLL is measured.
-  - This parameter will be controlled by the EasySetupTimer.
+  - This parameter will be controlled by the [Easy Setup Timer](#easy-setup-timer).
 * <ins>phase-detector.01.fbMult</ins> is the fine gain control of the PLL.
 * <ins>phase-detector.01-01.clr</ins> turns off all components of the Phase Detector FPGA
 * <ins>phase-detector.01.clrFB</ins> turns off the PLL.
@@ -314,3 +316,33 @@ To set the correct phase target for the PLL:
 
 <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 29. </span> <span style="font-style: italic;">RF frequency off-resonance but PLL on</span></p>
 <div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/BridgeConPhaseLockOnFreq325.png"/></div><br>
+
+### <a href="https://www.bl-mirrotron.com/app06?trayNames=01,01" target="_blank">Timing App</a>
+([contents](#table-of-contents))<br>
+
+The Mirrotron RFQ is a pulsed system so a timing system is required. The Mirrotron Timing system is an 8 channel system based on a 32 bit counter clocked at 125 MHz. The resolution of the timing system is 8nS and can have intervals as long as 17 seconds.
+
+#### Channel allocation
+The Mirrotron RFQ uses five of the eight channels:
+* <ins>Channel 0</ins>  for the RF source and phase Detector
+* <ins>Channel 1</ins>  for LLRF scope
+* <ins>Channel 2</ins>  for the RF Power Amp pulse gate
+* <ins>Channel 3</ins>  for the RF Power Amp sample and hold
+* <ins>Channel 4</ins>  for the RF Power Amp Scope
+
+#### Easy Setup Timer
+
+These channels can be configured with the Timing App as shown in Figure 30. To change the pulse length of the RFQ, all five channels would need to be adjusted which would be time consuming and error prone. To make it easier to change the pulse length a virtual tray called the Easy Setup Timer was created. This virtual tray will adjust all five channels synchronously.
+
+All the user needs to adjust is:
+* <ins>gateGen125.01.repRate</ins> sets how often the RFQ pulses
+  - This is the same parameter as the Rep. Rate parameter in the [Bridge Control app](#bridge-control-app)
+* <ins>easySetupTimer.01.pulseLength</ins> sets the length of the RF pulse
+  - This is the same parameter as the Pulse Length parameter in the [Bridge Control app](#bridge-control-app)
+
+The other Easy Setup Timer parameters are:
+* <ins>easySetupTimer.01.offset</ins> is how far the rf pulse is offset from the start of the interval.
+* <ins>easySetupTimer.01.paCushion</ins> sets how much time on the leading and falling edge of the RF pulse to add to the RF Power amplifier gate.
+
+<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 30. </span> <span style="font-style: italic;">Timing App</span></p>
+<div style="width:100%;text-align:center;"><img style="border-style:solid;border-color:#1c6e97;" src="doc/TimingApp.png"/></div><br>
