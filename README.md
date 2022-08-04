@@ -39,7 +39,7 @@ The <a href="https://www.bl-mirrotron.com/" target="_blank">control system for t
 ([contents](#table-of-contents))<br>
 For security, Blinky-Lite<sup>TM</sup> requires an <a href="https://www.cloudflare.com/learning/ssl/what-is-https/" target="_blank">https</a> connection. Any attempt at using an http connection will be redirected to an https connection.
 
-You must first obtain a login from your system administrator to access the control system. Blinky-Lite<sup>TM</sup> uses role-based access with Jason Web Token(JWT) technology for logging into the system. The user is assigned a role to protect the system from the user making inadvertent settings.
+You must first obtain a login from your system administrator to access the control system. Blinky-Lite<sup>TM</sup> uses role-based access with JSON Web Token(JWT) technology for logging into the system. The user is assigned a role to protect the system from the user making inadvertent settings.
 
 ### Read-only roles
 ([contents](#table-of-contents))<br>
