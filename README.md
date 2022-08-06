@@ -1,3 +1,4 @@
+<img src="https://bl-mirrotron.github.io/doc/mirrotronSplash.png"/><br>
 # The Mirrotron RFQ Control System Users' Guide
 ## Table of Contents
 * [Overview](#overview)
