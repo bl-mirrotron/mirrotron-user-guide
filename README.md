@@ -1,7 +1,7 @@
 # Mirrotron Users' Guide
 <img src="https://bl-mirrotron.github.io/doc/mirrotronSplash.png"/><br>
-* <a href="https://www.bl-mirrotron.com/" target="_blank">Mirrotron</a>
-* <a href="https://www.bl-mirrotron.com/apps" target="_blank">Applications</a>
+* <a href="https://www.bl-mirrotron.com/" target="_blank">Mirrotron Web Page</a>
+* <a href="https://www.bl-mirrotron.com/apps" target="_blank">Application Launcher</a>
 
 ## Table of Contents
 * [Control system overview](https://docs.bl-mirrotron.com/)
