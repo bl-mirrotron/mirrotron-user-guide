@@ -1,9 +1,9 @@
 # Mirrotron RFQ Users' Guide
 <img src="https://bl-mirrotron.github.io/doc/mirrotronSplash.png"/><br>
-* [Control system overview](https://docs.bl-mirrotron.com/)
 
 ## Table of Contents
-* [Overview](#overview)
+* [Control system overview](https://docs.bl-mirrotron.com/)
+* [Application Overview](#overview)
 * [System Login](#system-login)
   - [Read-only roles](#read-only-roles)
   - [Setting privilege roles](#setting-privilege-roles)
