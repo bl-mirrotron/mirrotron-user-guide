@@ -1,4 +1,4 @@
-# Mirrotron RFQ Users' Guide
+# Mirrotron Users' Guide
 <img src="https://bl-mirrotron.github.io/doc/mirrotronSplash.png"/><br>
 
 ## Table of Contents
