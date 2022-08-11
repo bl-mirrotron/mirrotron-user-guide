@@ -34,7 +34,7 @@
 
 ## Overview
 ([contents](#table-of-contents))<br>
-The <a href="https://www.bl-mirrotron.com/" target="_blank">control system for the Mirrotron RFQ</a> uses the <a href="https://www.bl-mc.se/" target="_blank">Blinky-Lite<sup>TM</sup></a>  control platform. This document is an overview of how to use the custom applications for the Mirrotron RFQ. For portability, reliability, and security all Blinky-Lite<sup>TM</sup> user applications are web apps. The Mirrotron RFQ web apps are located at the app <a href="https://www.bl-mirrotron.com/apps" target="_blank">page</a>.
+The <a href="https://docs.bl-mirrotron.com/" target="_blank">control system for the Mirrotron RFQ</a> uses the <a href="https://www.bl-mc.se/" target="_blank">Blinky-Lite<sup>TM</sup></a>  control platform. This document is an overview of how to use the custom applications for the Mirrotron RFQ. For portability, reliability, and security all Blinky-Lite<sup>TM</sup> user applications are web apps. The Mirrotron RFQ web apps are located at the app <a href="https://www.bl-mirrotron.com/apps" target="_blank">page</a>.
 
 ## System Login
 ([contents](#table-of-contents))<br>
@@ -252,7 +252,7 @@ The Low Level RF (LLRF) controls the amplitude and frequency of the RF signal th
 * Phase Detector
 * LLRF Scope
 
-Each of these trays has quite a few parameters that are <a href="https://bl-mirrotron.github.io/#rf-source" target="_blank">described</a> in the system architecture. The LLRF app is shown in Figure 25. The Status card displays the cavity voltage detected by the cavity pickup and normalized to the coupler voltage measured at the center of the RF pulse. The phase signal is the comparison between the RF wave sent to the Power amplifier to the RF wave detected at the cavity pickup. The absolute value of the phase signal is arbitrary and is affected by cable lengths in the system in addition to the location of the cavity resonant frequency. Relative changes of the phase can be used to determine if the cavity resonant frequency is drifting.
+Each of these trays has quite a few parameters that are <a href="https://docs.bl-mirrotron.com/#rf-source" target="_blank">described</a> in the system architecture. The LLRF app is shown in Figure 25. The Status card displays the cavity voltage detected by the cavity pickup and normalized to the coupler voltage measured at the center of the RF pulse. The phase signal is the comparison between the RF wave sent to the Power amplifier to the RF wave detected at the cavity pickup. The absolute value of the phase signal is arbitrary and is affected by cable lengths in the system in addition to the location of the cavity resonant frequency. Relative changes of the phase can be used to determine if the cavity resonant frequency is drifting.
 
 Below the status card is the LLRF scope plot which shows the magnitude, in-phase and out-of-phase components of the cavity voltage. The LLRF scope plot can be adjusted in the LLRF Scope Control Card shown in Figure 26 but most of these parameters should be rarely adjusted.
 
