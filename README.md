@@ -1,5 +1,5 @@
-<img src="https://bl-mirrotron.github.io/doc/mirrotronSplash.png"/><br>
 # Mirrotron RFQ Users' Guide
+<img src="https://bl-mirrotron.github.io/doc/mirrotronSplash.png"/><br>
 * [Control system overview](https://docs.bl-mirrotron.com/)
 
 ## Table of Contents
